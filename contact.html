@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Flyora Aircraft Parts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <video id="bgVideo" class="background-video" autoplay muted playsinline>
+        <source src="img/SSYouTube.online_Cloud Heaven Copyrights Free Video_1080p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <div class="content-fit">
+            <div class="logo">Flyora</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Products</li>
+                    <li>About</li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="section" id="contact-page">
+        <div class="content-fit">
+            <div class="contact-container">
+                <!-- Left side with plane model -->
+                <div class="plane-section">
+                    <div class="plane-container">
+                        <div id="plane3D"></div>
+                        <div class="plane-text">
+                            <h2>Ready to Soar Higher?</h2>
+                            <p>Let's discuss your aircraft parts requirements and bring your aerospace projects to life with precision engineering.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side with contact form -->
+                <div class="form-section">
+                    <div class="contact-form-container">
+                        <h1>Get In Touch</h1>
+                        <p class="form-subtitle">Ready to discuss your aircraft parts needs? Send us a message and we'll respond within 24 hours.</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="enquiry">Enquiry Type *</label>
+                                <select id="enquiry" name="enquiry" required>
+                                    <option value="">Select an option</option>
+                                    <option value="aircraft-parts">Aircraft Parts Manufacturing</option>
+                                    <option value="prototyping">Prototyping Services</option>
+                                    <option value="consultation">Engineering Consultation</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your aircraft parts requirements..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <div class="btn-icon">✈️</div>
+                            </button>
+                        </form>
+
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <div class="info-icon">📧</div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@flyora.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">📞</div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Plane Model Container -->
+    <div id="plane3DContainer"></div>
+
+    <script type="module" src="contact.js"></script>
+</body>
+
+</html>

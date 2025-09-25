@@ -1,0 +1,429 @@
+@import url('https://fonts.cdnfonts.com/css/devil-breeze');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/bimbo');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1B1B1B;
+    color: #165ff2;
+    font-size: 14px;
+}
+
+html { scroll-behavior: smooth; }
+
+*::-webkit-scrollbar { width: 0; }
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-fit {
+    width: min(1200px, 90vw);
+    margin: auto;
+    min-height: 80vh;
+    position: relative;
+    padding-block: 10em; /* desktop default */
+}
+
+/* ===== Header ===== */
+header {
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    background-color: rgba(27, 27, 27, 0.6);
+    background-image: repeating-linear-gradient(to right, transparent 0 500px, #eee1 500px 501px);
+}
+
+.logo img {
+    height: 160px; /* desktop default */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+header .content-fit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: auto;
+    padding-block: 0;
+    padding-inline: 1em;
+}
+
+header nav ul {
+    font-family: "devil breeze";
+    font-weight: bold;
+    display: flex;
+    gap: 2em;
+}
+
+header nav ul li a {
+    color: #f5f5f7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 10px 8px;
+    display: inline-block;
+}
+
+header nav ul li a:hover { color: #4000ff; }
+
+.menu-toggle { display: none; }
+
+/* ===== Banner ===== */
+#banner .title {
+    color: #4000ff;
+    font-size: clamp(3rem, 10vw, 11em);
+    font-family: "devil breeze";
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+
+#banner .title2 {
+    color: #4000ff;
+    font-size: clamp(1rem, 3vw, 3em);
+    font-family: "devil breeze";
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 190px;
+}
+
+#banner .title::before {
+    content: attr(data-before);
+    position: relative;
+    top: 0.5em;
+    z-index: -1;
+    color: #0234be;
+}
+
+.des p {
+    font-size: 1.5em;
+    color: #1d4ed8;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+/* ===== Sections ===== */
+#about {
+    width: min(1000px, 80vw);
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    padding-block: 10em;
+    left: 160px; /* removed in responsive */
+}
+
+#intro .content-fit {
+    display: flex;
+    gap: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section .number,
+.section .content-fit .title {
+    font-family: "devil breeze";
+    font-size: 5em;
+    font-weight: bold;
+}
+
+#description .content-fit { padding-right: 30%; }
+#description .title { font-size: 7em; font-weight: 500; }
+
+/* ===== Contact Section ===== */
+#contact {
+    width: min(1000px, 90vw);
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    padding-block: 4em;
+    text-align: center;
+}
+
+/* Align contact section content to the right while keeping layout intact */
+#contact .content-fit {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Limit content width on the right and keep inner elements' alignment natural */
+#contact .des {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Ensure the form sits flush to the right inside the contact section */
+#contact .contact-form {
+    margin: 40px 0 0 0;
+}
+
+#contact table {
+    width: min(700px, 80vw);
+    padding-top: 2em;
+    font-size: 2em;
+    margin: auto;
+}
+
+#contact table td {
+    padding-block: 0.5em;
+    border-bottom: 1px dashed #445022;
+}
+
+#contact .sign {
+    font-family: 'Bimbo', sans-serif;
+    font-size: 10em;
+}
+
+.contact-form {
+    max-width: 500px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
+}
+
+.contact-form label { font-weight: bold; color: #333; }
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0077ff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 119, 255, 0.3);
+}
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #0077ff, #00c6ff);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.contact-form button:hover {
+    background: linear-gradient(90deg, #005ec2, #0098c9);
+    transform: translateY(-2px);
+}
+
+/* ===== Sliders ===== */
+.slider-container,
+.what-we-do-container {
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: transparent;
+}
+
+.slider, #wwdSlider {
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+
+.service-slide, .wwd-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: transparent;
+}
+
+.service-slide-text h2,
+.wwd-slide-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+}
+
+.service-slide-text p,
+.wwd-slide-text p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    color: #1d4ed8;
+}
+
+/* Dots */
+.dots-container, .wwd-dots-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.dots-container { left: 1.5rem; }
+.wwd-dots-container { right: 1.5rem; }
+.dot, .wwd-dot {
+    width: 12px; height: 12px;
+    background-color: rgba(15,32,39,0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dot.active, .wwd-dot.active { background-color: #1e3a8a; }
+
+/* ===== Logos Slider ===== */
+.logos-slider {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%); /* centered */
+}
+.logos-track {
+    display: flex;
+    gap: 40px;
+    animation: scroll 15s linear infinite;
+}
+.logos-track img {
+    height: clamp(80px, 15vw, 130px);
+    width: auto;
+    flex-shrink: 0;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ===== 3D & Background ===== */
+#container3D {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+.background-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ===== Footer ===== */
+footer {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+footer span { font-weight: bold; color: #00bfff; }
+
+/* ===== Responsive (File 2 clean) ===== */
+@media screen and (max-width: 1023px) {
+    .content-fit { padding-block: 6em; }
+    #about { padding-block: 4em; left: 0; }
+    #banner .title { top: 150px; }
+    #banner .title2 { top: 180px; }
+    #intro .content-fit { flex-direction: column; gap: 3em; text-align: center; }
+    .slider-container, .what-we-do-container { max-width: 80%; margin: 2em auto; }
+    .logos-track img { height: 100px; }
+}
+
+@media screen and (max-width: 768px) {
+    header .content-fit { flex-direction: row; justify-content: space-between; padding: 0.5em 1em; }
+    header nav {
+        display: none;
+        position: absolute; top: 100%; right: 0;
+        background: rgba(27,27,27,0.95);
+        backdrop-filter: blur(10px);
+        padding: 1em;
+        border-radius: 0 0 8px 8px;
+        width: min(260px, 80vw);
+    }
+    header nav ul { flex-direction: column; gap: 1em; }
+    header nav.show { display: block; }
+    .menu-toggle { display: block; font-size: 1.8em; color: #4000ff; cursor: pointer; }
+    .logo img { max-height: 50px; }
+
+    #banner .title { font-size: clamp(2rem, 8vw, 4em); top: 120px; }
+    #banner .title2 { font-size: clamp(0.8rem, 3vw, 1.5em); top: 150px; }
+
+    .content-fit { padding-block: 4em; width: 95vw; }
+    #about { width: 90vw; padding-block: 3em; }
+    #intro .content-fit { flex-direction: column; gap: 2em; text-align: center; }
+
+    .slider-container, .what-we-do-container { width: 100%; max-width: 100%; height: 350px; margin: 1.5em 0; }
+    .service-slide, .wwd-slide { padding: 1.5rem; }
+    .dots-container { left: 1rem; }
+    .wwd-dots-container { right: 1rem; }
+
+    .logos-slider { margin-left: calc(-50vw + 50%); padding: 10px 0; }
+    .logos-track { gap: 20px; }
+    .logos-track img { height: 60px; }
+
+    #contact { width: 95vw; padding-block: 3em; }
+    .contact-form { margin: 20px auto; padding: 20px; }
+
+    #container3D { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 50; }
+}
+
+@media screen and (max-width: 480px) {
+    .content-fit { width: 95vw; padding-block: 3em; }
+    #banner .title { font-size: clamp(1.5rem, 8vw, 3em); top: 100px; }
+    #banner .title2 { font-size: clamp(0.7rem, 3vw, 1.2em); top: 130px; }
+    .slider-container, .what-we-do-container { height: 300px; }
+    .service-slide, .wwd-slide { padding: 1rem; }
+    .service-slide-text h2, .wwd-slide-text h2 { font-size: clamp(1.2rem, 5vw, 1.8rem); margin-bottom: 0.5rem; }
+    .service-slide-text p, .wwd-slide-text p { font-size: clamp(0.9rem, 3vw, 1rem); }
+    .contact-form { padding: 15px; margin: 15px auto; }
+    .contact-form input, .contact-form textarea { padding: 10px; font-size: 14px; }
+    .contact-form button { padding: 12px; font-size: 14px; }
+    footer { padding: 15px 0; font-size: 12px; }
+}
+
+/* ===== What We Do: align section to the right ===== */
+#what-we-do1 .content-fit {
+    display: block;
+    text-align: right; /* heading (.number) to the right */
+}
+
+#what-we-do1 .what-we-do-container {
+    margin-left: auto; /* push slider container to the right */
+}
+

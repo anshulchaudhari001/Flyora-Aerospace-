@@ -1,0 +1,384 @@
+/* Contact Page Specific Styles */
+#contact-page {
+    height: 100vh;
+    padding-top: 80px;
+}
+
+#contact-page .content-fit {
+    min-height: unset;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    height: 100%;
+}
+
+/* Plane Section Styles */
+.plane-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.plane-container {
+    text-align: center;
+    position: relative;
+}
+
+#plane3D {
+    width: 560px;
+    height: 560px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.plane-text {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.plane-text h2 {
+    font-family: "devil breeze", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d1ff48;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.plane-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #eef8ce;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Form Section Styles */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(27, 27, 27, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(209, 255, 72, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-container h1 {
+    font-family: "devil breeze", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d1ff48;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #eef8ce;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #eef8ce;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 1rem;
+    border: 2px solid rgba(209, 255, 72, 0.3);
+    border-radius: 10px;
+    background: rgba(27, 27, 27, 0.6);
+    color: #eef8ce;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d1ff48;
+    box-shadow: 0 0 0 3px rgba(209, 255, 72, 0.1);
+    background: rgba(27, 27, 27, 0.8);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(238, 248, 206, 0.5);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #1B1B1B;
+    color: #eef8ce;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #d1ff48 0%, #a8d43a 100%);
+    border: none;
+    border-radius: 10px;
+    color: #1B1B1B;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(209, 255, 72, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+    animation: fly 2s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(209, 255, 72, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(209, 255, 72, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: rgba(209, 255, 72, 0.1);
+    transform: translateX(5px);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(209, 255, 72, 0.1);
+    border-radius: 50%;
+}
+
+.info-item h4 {
+    color: #d1ff48;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.info-item p {
+    color: #eef8ce;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* 3D Plane Container */
+#plane3DContainer {
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 560px;
+    height: 560px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .plane-section {
+        order: 2;
+    }
+    
+    .form-section {
+        order: 1;
+    }
+    
+    #plane3D {
+        width: 420px;
+        height: 420px;
+    }
+    
+    .plane-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    #plane3DContainer {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 420px;
+        height: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form-container {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .contact-form-container h1 {
+        font-size: 2rem;
+    }
+    
+    .plane-text h2 {
+        font-size: 2rem;
+    }
+    
+    #plane3D {
+        width: 320px;
+        height: 320px;
+    }
+    
+    #plane3DContainer {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .contact-form-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .plane-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    #plane3D {
+        width: 260px;
+        height: 260px;
+    }
+    
+    #plane3DContainer {
+        width: 260px;
+        height: 260px;
+    }
+
+/* Ensure the form column fits within viewport height */
+.contact-form-container {
+    padding: 2rem;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+}
+
+.contact-form {
+    gap: 1rem;
+}
+}
+
+/* Navigation Link Styles */
+header nav ul li a {
+    color: #eef8ce;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #d1ff48;
+}
+
+/* Form Validation Styles */
+.form-group input:invalid,
+.form-group select:invalid,
+.form-group textarea:invalid {
+    border-color: rgba(255, 107, 107, 0.5);
+}
+
+.form-group input:valid,
+.form-group select:valid,
+.form-group textarea:valid {
+    border-color: rgba(107, 255, 107, 0.5);
+}
